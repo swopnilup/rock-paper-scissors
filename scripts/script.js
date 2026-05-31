@@ -1,34 +1,4 @@
-<!DOCTYPE html>
-<head>
-  <title>rock paper scissors</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <p class="title">Rock Paper Scissors</p>
-  
-  <button  class="move-button" onclick="playGame('rock');"> <img src="/images/rock-emoji.png" class="move-icon"> </button>
-
-
-  <button  class="move-button" onclick="playGame('paper');"> <img src="/images/paper-emoji.png" class="move-icon"> </button>
-  
-  
-  <button  class="move-button" onclick="playGame('scissors');"> <img src="/images/scissors-emoji.png" class="move-icon"> </button>
-
-  <p class="js-result result"></p>
-  <p class="js-moves"></p>
-  <p class="js-score score"></p>
-
-  <button class="reset-score-button"onclick="
-  score.wins = 0;
-  score.losses = 0;
-  score.ties = 0;
-  localStorage.removeItem('score');
-  updateScoreElement();
-  ">Reset score</button>
-
-
-  <script>
-    let score =JSON.parse(localStorage.getItem('score')) || {
+ let score =JSON.parse(localStorage.getItem('score')) || {
         wins: 0,
         losses: 0,
         ties: 0
@@ -147,8 +117,3 @@
       
       return computerMove;
     }
-      
-  </script>
-  
-</body>
-</html>
