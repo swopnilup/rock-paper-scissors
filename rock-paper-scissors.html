@@ -4,6 +4,7 @@
   <link rel="stylesheet" href="/styles/styles.css" />
 </head>
 <body>
+<div class="game-window">
   <p class="title">Rock Paper Scissors</p>
   
   <button  class="move-button" onclick="playGame('rock');"> <img src="/images/rock-emoji.png" class="move-icon"> </button>
@@ -24,7 +25,9 @@
   score.ties = 0;
   localStorage.removeItem('score');
   updateScoreElement();
-  ">Reset score</button> 
-  <script src="/scripts/script.js"></script>
+  ">Reset score</button>
+</div>
+ 
+<script src="/scripts/script.js"></script>
 </body>
 </html>
